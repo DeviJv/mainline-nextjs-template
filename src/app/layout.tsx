@@ -63,29 +63,30 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mainline - Modern Next.js Template",
-    template: "%s | Mainline",
+    default: "Quantum Tech Solution | Solusi IT All-in-One",
+    template: "%s | Quantum Tech Solution",
   },
   description:
-    "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+    "Quantum Tech Solution menawarkan solusi sistem terintegrasi (all-in-one) untuk bisnis Anda, meliputi ERP Manufaktur, Sistem HRM, PACS (Picture Archiving and Communication System), hingga platform E-Commerce.",
   keywords: [
-    "Next.js",
-    "nextjs template",
-    "nextjs theme",
-    "nextjs starter",
-    "shadcn template",
-    "shadcn theme",
-    "shadcn starter",
-    "tailwind template",
-    "tailwind theme",
-    "tailwind starter",
-    "mdx template",
-    "mdx theme",
-    "mdx starter",
+    "Quantum Tech Solution",
+    "ERP Manufaktur",
+    "Sistem HRM",
+    "Aplikasi PACS",
+    "Pembuatan E-Commerce",
+    "Software ERP Indonesia",
+    "Sistem HRD",
+    "Solusi IT Terintegrasi",
+    "Software Rumah Sakit",
+    "Aplikasi Klinik",
+    "All-in-one IT Solution",
+    "Vendor IT Indonesia",
+    "Software Manufaktur",
+    "Aplikasi Kepegawaian",
   ],
-  authors: [{ name: "shadcnblocks.com" }],
-  creator: "shadcnblocks.com",
-  publisher: "shadcnblocks.com",
+  authors: [{ name: "Quantum Tech Solution" }],
+  creator: "Quantum Tech Solution",
+  publisher: "Quantum Tech Solution",
   robots: {
     index: true,
     follow: true,
@@ -102,26 +103,26 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "Mainline - Modern Next.js Template",
+    title: "Quantum Tech Solution | Solusi IT All-in-One",
     description:
-      "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
-    siteName: "Mainline",
+      "Quantum Tech Solution menawarkan solusi sistem terintegrasi (all-in-one) untuk bisnis Anda, meliputi ERP Manufaktur, Sistem HRM, PACS, dan platform E-Commerce.",
+    siteName: "Quantum Tech Solution",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mainline - Modern Next.js Template",
+        alt: "Quantum Tech Solution",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mainline - Modern Next.js Template",
+    title: "Quantum Tech Solution | Solusi IT All-in-One",
     description:
-      "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+      "Quantum Tech Solution menawarkan solusi sistem terintegrasi (all-in-one) untuk bisnis Anda, meliputi ERP Manufaktur, Sistem HRM, PACS, dan platform E-Commerce.",
     images: ["/og-image.jpg"],
-    creator: "@ausrobdev",
+    creator: "@quantumtech",
   },
 };
 

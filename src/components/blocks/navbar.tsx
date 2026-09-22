@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { ChevronRight, Github } from "lucide-react";
+import { ChevronRight, PhoneCall } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -49,11 +49,23 @@ export const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section
       className={cn(
-        "bg-background/70 absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
-        "top-5 lg:top-12",
+        "left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
+        isScrolled
+          ? "fixed top-4 bg-background/90 shadow-md"
+          : "absolute top-5 bg-background/70 lg:top-12",
       )}
     >
       <div className="flex items-center justify-between px-6 py-3">
@@ -120,17 +132,17 @@ export const Navbar = () => {
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
           <ThemeToggle />
-          <Link href="/login" className="max-lg:hidden">
+          <Link href="/login" className="hidden max-lg:hidden">
             <Button variant="outline">
               <span className="relative z-10">Login</span>
             </Button>
           </Link>
           <a
-            href="https://github.com/shadcnblocks/mainline-nextjs-template"
+            href="#"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            <Github className="size-4" />
-            <span className="sr-only">GitHub</span>
+            <PhoneCall className="size-4" />
+            <span className="sr-only">Contact</span>
           </a>
 
           {/* Hamburger Menu Button (Mobile Only) */}
